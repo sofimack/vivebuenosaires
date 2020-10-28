@@ -6,8 +6,8 @@
         "hasta": "htl",
         "precio": 50,
         "cantPax": [1, 2],
-        "tipoServicio": "privado",
-    }
+        "tipoServicio": "privado"
+    },
 
     {
         "id": "htleze1",
@@ -15,8 +15,8 @@
         "hasta": "eze",
         "precio": 50,
         "cantPax": [1, 2],
-        "tipoServicio": "privado",
-    }
+        "tipoServicio": "privado"
+    },
 
     {
         "id": "ezehtl2",
@@ -24,8 +24,8 @@
         "hasta": "htl",
         "precio": 80,
         "cantPax": [3, 4, 5],
-        "tipoServicio": "privado",
-    }
+        "tipoServicio": "privado"
+    },
 
     {
         "id": "htleze2",
@@ -33,8 +33,8 @@
         "hasta": "eze",
         "precio": 80,
         "cantPax": [3, 4, 5],
-        "tipoServicio": "privado",
-    }
+        "tipoServicio": "privado"
+    },
 
     {
         "id": "ezehtl3",
@@ -42,8 +42,8 @@
         "hasta": "htl",
         "precio": 110,
         "cantPax": [6, 7, 8, 9, 10],
-        "tipoServicio": "privado",
-    }
+        "tipoServicio": "privado"
+    },
 
     {
         "id": "htleze3",
@@ -51,8 +51,8 @@
         "hasta": "eze",
         "precio": 110,
         "cantPax": [6, 7, 8, 9, 10],
-        "tipoServicio": "privado",
-    }
+        "tipoServicio": "privado"
+    },
 
     {
         "id": "ezehtlreg",
@@ -60,8 +60,8 @@
         "hasta": "htl",
         "precio": 15,
         "cantPax": 1,
-        "tipoServicio": "regular",
-    }
+        "tipoServicio": "regular"
+    },
 
     {
         "id": "htlezereg",
@@ -69,10 +69,10 @@
         "hasta": "eze",
         "precio": 15,
         "cantPax": 1,
-        "tipoServicio": "regular",
+        "tipoServicio": "regular"
     }
 
-    ]
+    ],
 
 "trasladosAEPHTL": [
      {
@@ -81,8 +81,8 @@
         "hasta": "htl",
         "precio": 35,
         "cantPax": [1, 2],
-        "tipoServicio": "privado",
-    }
+        "tipoServicio": "privado"
+    },
 
       {
         "id": "htlaep1",
@@ -90,16 +90,16 @@
         "hasta": "aep",
         "precio": 35,
         "cantPax": [1, 2],
-        "tipoServicio": "privado",
-    }
+        "tipoServicio": "privado"
+    },
      {
         "id": "aephtl2",
         "desde": "aep",
         "hasta": "htl",
         "precio": 60,
         "cantPax": [3, 4, 5],
-        "tipoServicio": "privado",
-    }
+        "tipoServicio": "privado"
+    },
 
      {
         "id": "htlaep2",
@@ -107,8 +107,8 @@
         "hasta": "aep",
         "precio": 60,
         "cantPax": [3, 4, 5],
-        "tipoServicio": "privado",
-    }
+        "tipoServicio": "privado"
+    },
 
     {
         "id": "aephtl3",
@@ -116,8 +116,8 @@
         "hasta": "htl",
         "precio": 90,
         "cantPax": [6, 7, 8, 9, 10],
-        "tipoServicio": "privado",
-    }
+        "tipoServicio": "privado"
+    },
 
     {
         "id": "htlaep3",
@@ -125,8 +125,8 @@
         "hasta": "aep",
         "precio": 90,
         "cantPax": [6, 7, 8, 9, 10],
-        "tipoServicio": "privado",
-    }
+        "tipoServicio": "privado"
+    },
 
     {
         "id": "aephtlreg",
@@ -134,8 +134,8 @@
         "hasta": "htl",
         "precio": 10,
         "cantPax": 1,
-        "tipoServicio": "regular",
-    }
+        "tipoServicio": "regular"
+    },
 
      {
         "id": "htlaepreg",
@@ -143,9 +143,9 @@
         "hasta": "aep",
         "precio": 10,
         "cantPax": 1,
-        "tipoServicio": "regular",
+        "tipoServicio": "regular"
     }
-]
+],
 
 "trasladosEZEAEP": [
     {
@@ -154,8 +154,8 @@
         "hasta": "aep",
         "precio": 50,
         "cantPax": [1, 2],
-        "tipoServicio": "privado",
-    }
+        "tipoServicio": "privado"
+    },
 
     {
         "id": "aepeze1",
@@ -163,8 +163,8 @@
         "hasta": "eze",
         "precio": 50,
         "cantPax": [1, 2],
-        "tipoServicio": "privado",
-    }
+        "tipoServicio": "privado"
+    },
 
     {
         "id": "ezeaep2",
@@ -172,8 +172,8 @@
         "hasta": "aep",
         "precio": 80,
         "cantPax": [3, 4, 5],
-        "tipoServicio": "privado",
-    }
+        "tipoServicio": "privado"
+    },
 
     {
         "id": "aepeze2",
@@ -181,8 +181,8 @@
         "hasta": "eze",
         "precio": 80,
         "cantPax": [3, 4, 5],
-        "tipoServicio": "privado",
-    }
+        "tipoServicio": "privado"
+    },
 
     {
         "id": "ezeaep3",
@@ -190,8 +190,8 @@
         "hasta": "aep",
         "precio": 110,
         "cantPax": [6, 7, 8, 9, 10],
-        "tipoServicio": "privado",
-    }
+        "tipoServicio": "privado"
+    },
 
     {
         "id": "aepeze3",
@@ -199,7 +199,7 @@
         "hasta": "eze",
         "precio": 110,
         "cantPax": [6, 7, 8, 9, 10],
-        "tipoServicio": "privado",
+        "tipoServicio": "privado"
     }
 
 ]

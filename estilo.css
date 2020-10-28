@@ -8,7 +8,6 @@ body {
   
   }
   nav {
-    /*background: #dddddd;*/
     padding: 25px;
     border-radius:2px;
     display: flex;
@@ -69,6 +68,66 @@ h1 {
     font-size: 1.5rem;
     text-align: center;
     font-family: 'Lora', serif;
+}
+
+/*POP UP*/
+#enviar {
+  display: block;
+  margin: 20px auto;
+  background: salmon;
+  color: white;
+  border: 0;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+#enviar:hover {
+  background: palevioletred;
+  transition: all 0.2s;
+}
+
+.popup-wrapper {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.popup {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  margin: 10% auto;
+  padding: 20px;
+  position: relative;
+}
+
+.popup p a {
+  background: salmon;
+  color: white;
+  text-decoration: none;
+  padding: 6px 10px;
+  margin: 30px auto;
+  display: block;
+  width: 50%;
+}
+
+.popup p a:hover {
+  background: palevioletred;
+  transition: all 0.2s;
+}
+
+.popup-close {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
 }
 
 

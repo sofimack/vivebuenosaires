@@ -1,0 +1,207 @@
+{
+"trasladosEZEHTL": [
+    {
+        "id": "ezehtl1",
+        "desde": "eze",
+        "hasta": "htl",
+        "precio": 50,
+        "cantPax": [1, 2],
+        "tipoServicio": "privado",
+    }
+
+    {
+        "id": "htleze1",
+        "desde": "htl",
+        "hasta": "eze",
+        "precio": 50,
+        "cantPax": [1, 2],
+        "tipoServicio": "privado",
+    }
+
+    {
+        "id": "ezehtl2",
+        "desde": "eze",
+        "hasta": "htl",
+        "precio": 80,
+        "cantPax": [3, 4, 5],
+        "tipoServicio": "privado",
+    }
+
+    {
+        "id": "htleze2",
+        "desde": "htl",
+        "hasta": "eze",
+        "precio": 80,
+        "cantPax": [3, 4, 5],
+        "tipoServicio": "privado",
+    }
+
+    {
+        "id": "ezehtl3",
+        "desde": "eze",
+        "hasta": "htl",
+        "precio": 110,
+        "cantPax": [6, 7, 8, 9, 10],
+        "tipoServicio": "privado",
+    }
+
+    {
+        "id": "htleze3",
+        "desde": "htl",
+        "hasta": "eze",
+        "precio": 110,
+        "cantPax": [6, 7, 8, 9, 10],
+        "tipoServicio": "privado",
+    }
+
+    {
+        "id": "ezehtlreg",
+        "desde": "eze",
+        "hasta": "htl",
+        "precio": 15,
+        "cantPax": 1,
+        "tipoServicio": "regular",
+    }
+
+    {
+        "id": "htlezereg",
+        "desde": "htl",
+        "hasta": "eze",
+        "precio": 15,
+        "cantPax": 1,
+        "tipoServicio": "regular",
+    }
+
+    ]
+
+"trasladosAEPHTL": [
+     {
+        "id": "aephtl1",
+        "desde": "aep",
+        "hasta": "htl",
+        "precio": 35,
+        "cantPax": [1, 2],
+        "tipoServicio": "privado",
+    }
+
+      {
+        "id": "htlaep1",
+        "desde": "htl",
+        "hasta": "aep",
+        "precio": 35,
+        "cantPax": [1, 2],
+        "tipoServicio": "privado",
+    }
+     {
+        "id": "aephtl2",
+        "desde": "aep",
+        "hasta": "htl",
+        "precio": 60,
+        "cantPax": [3, 4, 5],
+        "tipoServicio": "privado",
+    }
+
+     {
+        "id": "htlaep2",
+        "desde": "htl",
+        "hasta": "aep",
+        "precio": 60,
+        "cantPax": [3, 4, 5],
+        "tipoServicio": "privado",
+    }
+
+    {
+        "id": "aephtl3",
+        "desde": "aep",
+        "hasta": "htl",
+        "precio": 90,
+        "cantPax": [6, 7, 8, 9, 10],
+        "tipoServicio": "privado",
+    }
+
+    {
+        "id": "htlaep3",
+        "desde": "htl",
+        "hasta": "aep",
+        "precio": 90,
+        "cantPax": [6, 7, 8, 9, 10],
+        "tipoServicio": "privado",
+    }
+
+    {
+        "id": "aephtlreg",
+        "desde": "aep",
+        "hasta": "htl",
+        "precio": 10,
+        "cantPax": 1,
+        "tipoServicio": "regular",
+    }
+
+     {
+        "id": "htlaepreg",
+        "desde": "htl",
+        "hasta": "aep",
+        "precio": 10,
+        "cantPax": 1,
+        "tipoServicio": "regular",
+    }
+]
+
+"trasladosEZEAEP": [
+    {
+        "id": "ezeaep1",
+        "desde": "eze",
+        "hasta": "aep",
+        "precio": 50,
+        "cantPax": [1, 2],
+        "tipoServicio": "privado",
+    }
+
+    {
+        "id": "aepeze1",
+        "desde": "aep",
+        "hasta": "eze",
+        "precio": 50,
+        "cantPax": [1, 2],
+        "tipoServicio": "privado",
+    }
+
+    {
+        "id": "ezeaep2",
+        "desde": "eze",
+        "hasta": "aep",
+        "precio": 80,
+        "cantPax": [3, 4, 5],
+        "tipoServicio": "privado",
+    }
+
+    {
+        "id": "aepeze2",
+        "desde": "aep",
+        "hasta": "eze",
+        "precio": 80,
+        "cantPax": [3, 4, 5],
+        "tipoServicio": "privado",
+    }
+
+    {
+        "id": "ezeaep3",
+        "desde": "eze",
+        "hasta": "aep",
+        "precio": 110,
+        "cantPax": [6, 7, 8, 9, 10],
+        "tipoServicio": "privado",
+    }
+
+    {
+        "id": "aepeze3",
+        "desde": "aep",
+        "hasta": "eze",
+        "precio": 110,
+        "cantPax": [6, 7, 8, 9, 10],
+        "tipoServicio": "privado",
+    }
+
+]
+}
+

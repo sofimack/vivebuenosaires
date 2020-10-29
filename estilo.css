@@ -70,6 +70,10 @@ h1 {
     font-family: 'Lora', serif;
 }
 
+#map {
+  height: 100%;
+}
+
 /*POP UP*/
 #enviar {
   display: block;

@@ -79,30 +79,15 @@ const htl = ('Hotel');
 
 
 
-/*
-
-//AJAX
-
-$("#enviar").click(mostrar)
-    
-    function mostrar (){ 
-    $.ajax({
-         url: "objetos.json",    		
-         type: "GET",                    
-         dataType: "json"               
-    }).done(function (resultado) {  	
-               console.log(resultado);
-           })
-      .fail(function (xhr, status, error) {   
-             console.log(xhr); console.log(status); console.log(error);
-            }) 
-  };
-  
-
-var serviciosTraslados = [ezehtl1, ezehtl2, ezehtl3, ezehtl4, ezehtl5, ezehtl6, ezehtlreg, htlezereg, aephtl1, aephtl2, aephtl3, aephtl4, aephtl5, aephtl6, aephtlreg, htlaepreg, ezeaep1, ezeaep2, ezeaep3, ezeaep4, ezeaep5, ezeaep6];
 
 
-var cantidadServicios = serviciosTraslados.length; */
+
+
+
+//var serviciosTraslados = [ezehtl1, ezehtl2, ezehtl3, ezehtl4, ezehtl5, ezehtl6, ezehtlreg, htlezereg, aephtl1, aephtl2, aephtl3, aephtl4, aephtl5, aephtl6, aephtlreg, htlaepreg, ezeaep1, ezeaep2, ezeaep3, ezeaep4, ezeaep5, ezeaep6];
+
+
+//var cantidadServicios = serviciosTraslados.length; 
 
 var tiposDeAutos = ['Corolla 5 puertas', 'H1', 'Van de hasta 10 pax con valijas'];
 

@@ -1,6 +1,4 @@
-
-
-//ANIMACION - no me toma los milisegundos
+//SHOW
 
 $(document).ready(cargarTituloPag);
 
@@ -9,11 +7,75 @@ function cargarTituloPag() {
 
 }
 
+
+//ANIMACION de imagenes
+
+var imagenes = $('.fotoBA');
+imagenes.hover(agrandar, achicar);
+
+function agrandar (evento) {
+  $(this).css('width', '105%')
+}
+
+function achicar (evento) {
+  $(this).css('width', '100%')
+}
+
+//POP-UP
+
+$('#enviar').click (chequeo)
+
+
+
+function chequeo () {
+    if ($('#origen').val() == $('#destino').val()) {
+       alert ('El origen y el destino deben ser diferentes')
+};
+
+    
+    
+    if ($('#origen').val() != $('#destino').val()) {
+        $('#enviar').click (popup);
+        $('.popup-close').click (cerrarPopUp);
+
+        var pop = document.querySelector('.popup-wrapper');
+        
+        function popup () {
+        pop.style.display = 'block';
+        }
+        function cerrarPopUp () {
+        pop.style.display = 'none';
+
+        };
+
+    }
+
+} 
+
+// COLOR VERDE CUANDO SELECCIONA
+
+
+$('.form-control').change(cambiarVerde);
+
+
+
+//FUNCIONES COLORES
+
+function cambiarRojo() {
+    this.style.borderColor = 'red';
+}
+
+function cambiarVerde() {
+    this.style.borderColor = 'green';
+}
+
+
 //VARIABLES Y CONSTANTES
 
 const eze = ('Ezeiza');
 const aep = ('Aeroparque');
 const htl = ('Hotel');
+
 
 
 
@@ -45,59 +107,6 @@ var cantidadServicios = serviciosTraslados.length; */
 var tiposDeAutos = ['Corolla 5 puertas', 'H1', 'Van de hasta 10 pax con valijas'];
 
 
-//alert
-
-
-
-$('#enviar').click (chequeo)
-
-
-
-function chequeo () {
-    if ($('#origen').val() == $('#destino').val()) {
-       alert ('El origen y el destino deben ser diferentes')
-};
-
-    
-    
-    if ($('#origen').val() != $('#destino').val()) {
-        $('#enviar').click (popup);
-        $('.popup-close').click (cerrarPopUp);
-
-        var pop = document.querySelector('.popup-wrapper');
-        
-        function popup () {
-        pop.style.display = 'block';
-        }
-        function cerrarPopUp () {
-        pop.style.display = 'none';
-
-        
-        
-        };
-
-    }
-
-} 
-
-
-
-// COLOR VERDE CUANDO SELECCIONA
-
-
-$('.form-control').change(cambiarVerde);
-
-
-
-//FUNCIONES COLORES
-
-function cambiarRojo() {
-    this.style.borderColor = 'red';
-}
-
-function cambiarVerde() {
-    this.style.borderColor = 'green';
-}
 
 //LOCAL STORAGE + json
 

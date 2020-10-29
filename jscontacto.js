@@ -1,3 +1,5 @@
+
+
 //DOM + eventos
 
 
@@ -37,4 +39,22 @@ function enter() {
 
 function eliminarNodo() {
     $("#resultado").remove();
+}
+
+
+//SCROLL A CONTACTO
+var contacto = $('#contacto');
+contacto.click (irAContacto);
+
+
+function irAContacto () {
+
+   
+    $("html, body").animate(
+        {
+            scrollTop: $("#datosContacto").offset().top
+        },
+        1500
+    )
+    
 }

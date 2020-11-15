@@ -3,7 +3,7 @@
 $(document).ready(cargarTituloPag);
 
 function cargarTituloPag() {
-    $("#tituloPag").show(1000);
+    $("#tituloPag").fadeIn(3000);
 
 }
 
@@ -21,20 +21,24 @@ function achicar (evento) {
   $(this).css('width', '100%')
 }
 
-//POP-UP
+
+
+//POP-UP y VALIDACION
 
 $('#enviar').click (chequeo)
 
 
+errorFormulario = $('#errorIndex');
 
 function chequeo () {
-    if ($('#origen').val() == $('#destino').val()) {
-       alert ('El origen y el destino deben ser diferentes')
-};
 
-    
-    
-    if ($('#origen').val() != $('#destino').val()) {
+    if ($('#origen').val() === '' || $('#destino').val() === '' || $('#pasajeros').val() === '') {
+        errorFormulario.show ();
+    }
+
+    else if ($('#origen').val() != $('#destino').val()) {
+        $("#errorDestino").hide();
+        $('#errorIndex').hide();
         $('#enviar').click (popup);
         $('.popup-close').click (cerrarPopUp);
 
@@ -46,28 +50,28 @@ function chequeo () {
         function cerrarPopUp () {
         pop.style.display = 'none';
 
+        $('#formulario').submit();
+
         };
 
     }
+    
+    
+    if ($('#origen').val() == $('#destino').val()) {
+        $("#errorDestino").show();
+    }
 
-} 
+} ; 
 
 // COLOR VERDE CUANDO SELECCIONA
 
 
 $('.form-control').change(cambiarVerde);
 
-
-
-//FUNCIONES COLORES
-
-function cambiarRojo() {
-    this.style.borderColor = 'red';
-}
-
 function cambiarVerde() {
     this.style.borderColor = 'green';
 }
+
 
 
 //VARIABLES Y CONSTANTES
@@ -78,18 +82,167 @@ const htl = ('Hotel');
 
 
 
+// COTIZACION CON AJAX Y JSON
+ 
 
+$('#enviar').click (cotizar);
 
+function cotizar () {
 
+        if ($('input:radio[name=gridRadios]:checked').val() == 'privado') {
 
+            if ($('#origen option:selected').val() == 'eze' && $('#destino option:selected').val() == 'aep' && $('#pasajeros option:selected').val() == '12' ) {
+                $('span#valor').append('50')
+            }
+        
+            if ($('#origen option:selected').val() == 'aep' && $('#destino option:selected').val() == 'eze' && $('#pasajeros option:selected').val() == '12') {
+                $('span#valor').append('50')
+            }  
+    
+            if ($('#origen option:selected').val() == 'eze' && $('#destino option:selected').val() == 'aep' && $('#pasajeros option:selected').val() == '35') {
+                $('span#valor').append('80')
+            } 
+    
+            if ($('#origen option:selected').val() == 'aep' && $('#destino option:selected').val() == 'eze' && $('#pasajeros option:selected').val() == '35') {
+                $('span#valor').append('80')
+            } 
+    
+            if ($('#origen option:selected').val() == 'eze' && $('#destino option:selected').val() == 'aep' && $('#pasajeros option:selected').val() == '610') {
+                $('span#valor').append('110')
+            } 
+    
+            if ($('#origen option:selected').val() == 'aep' && $('#destino option:selected').val() == 'eze' && $('#pasajeros option:selected').val() == '610') {
+                $('span#valor').append('110')
+            } 
+    
+            if ($('#origen option:selected').val() == 'aep' && $('#destino option:selected').val() == 'htl' && $('#pasajeros option:selected').val() == '12') {
+                $('span#valor').append('35')
+            } 
+    
+            if ($('#origen option:selected').val() == 'htl' && $('#destino option:selected').val() == 'aep' && $('#pasajeros option:selected').val() == '12') {
+                $('span#valor').append('35')
+            } 
+    
+            if ($('#origen option:selected').val() == 'aep' && $('#destino option:selected').val() == 'htl' && $('#pasajeros option:selected').val() == '35') {
+                $('span#valor').append('60')
+            } 
+    
+            if ($('#origen option:selected').val() == 'htl' && $('#destino option:selected').val() == 'aep' && $('#pasajeros option:selected').val() == '35') {
+                $('span#valor').append('60')
+            } 
+    
+            if ($('#origen option:selected').val() == 'aep' && $('#destino option:selected').val() == 'htl' && $('#pasajeros option:selected').val() == '610') {
+                $('span#valor').append('90')
+            } 
+    
+            if ($('#origen option:selected').val() == 'htl' && $('#destino option:selected').val() == 'aep' && $('#pasajeros option:selected').val() == '610') {
+                $('span#valor').append('110')
+            } 
+    
+            if ($('#origen option:selected').val() == 'eze' && $('#destino option:selected').val() == 'htl' && $('#pasajeros option:selected').val() == '12') {
+                $('span#valor').append('50')
+            } 
+    
+            if ($('#origen option:selected').val() == 'htl' && $('#destino option:selected').val() == 'eze' && $('#pasajeros option:selected').val() == '12') {
+                $('span#valor').append('50')
+            } 
+    
+            if ($('#origen option:selected').val() == 'eze' && $('#destino option:selected').val() == 'htl' && $('#pasajeros option:selected').val() == '35') {
+                $('span#valor').append('80')
+            } 
+    
+            if ($('#origen option:selected').val() == 'htl' && $('#destino option:selected').val() == 'eze' && $('#pasajeros option:selected').val() == '35') {
+                $('span#valor').append('80')
+            } 
+    
+            if ($('#origen option:selected').val() == 'eze' && $('#destino option:selected').val() == 'htl' && $('#pasajeros option:selected').val() == '610') {
+                $('span#valor').append('110')
+            } 
+    
+            if ($('#origen option:selected').val() == 'htl' && $('#destino option:selected').val() == 'eze' && $('#pasajeros option:selected').val() == '610') {
+                $('span#valor').append('110')
+            } 
+    
+    
+        }
+    
+        if ($('input:radio[name=gridRadios]:checked').val() == 'regular') {
+    
+            if ($('#origen option:selected').val() == 'eze' && $('#destino option:selected').val() == 'htl' && $('#pasajeros option:selected').val() == '12') {
+                $('span#valor').append('15 por persona')
+            } 
+    
+            if ($('#origen option:selected').val() == 'eze' && $('#destino option:selected').val() == 'htl' && $('#pasajeros option:selected').val() == '35') {
+                $('span#valor').append('15 por persona')
+            } 
+    
+            if ($('#origen option:selected').val() == 'eze' && $('#destino option:selected').val() == 'htl' && $('#pasajeros option:selected').val() == '610') {
+                $('span#valor').append('15 por persona')
+            } 
+    
+            if ($('#origen option:selected').val() == 'htl' && $('#destino option:selected').val() == 'eze' && $('#pasajeros option:selected').val() == '12') {
+                $('span#valor').append('15 por persona')
+            } 
+    
+            if ($('#origen option:selected').val() == 'htl' && $('#destino option:selected').val() == 'eze' && $('#pasajeros option:selected').val() == '35') {
+                $('span#valor').append('15 por persona')
+            } 
+    
+            if ($('#origen option:selected').val() == 'htl' && $('#destino option:selected').val() == 'eze' && $('#pasajeros option:selected').val() == '610') {
+                $('span#valor').append('15 por persona')
+            } 
+            if ($('#origen option:selected').val() == 'eze' && $('#destino option:selected').val() == 'aep' && $('#pasajeros option:selected').val() == '12') {
+                $('span#valor').append('15 por persona')
+            } 
+    
+            if ($('#origen option:selected').val() == 'eze' && $('#destino option:selected').val() == 'aep' && $('#pasajeros option:selected').val() == '35') {
+                $('span#valor').append('15 por persona')
+            } 
+    
+            if ($('#origen option:selected').val() == 'eze' && $('#destino option:selected').val() == 'aep' && $('#pasajeros option:selected').val() == '610') {
+                $('span#valor').append('15 por persona')
+            } 
+    
+            if ($('#origen option:selected').val() == 'aep' && $('#destino option:selected').val() == 'eze' && $('#pasajeros option:selected').val() == '12') {
+                $('span#valor').append('15 por persona')
+            } 
+    
+            if ($('#origen option:selected').val() == 'aep' && $('#destino option:selected').val() == 'eze' && $('#pasajeros option:selected').val() == '35') {
+                $('span#valor').append('15 por persona')
+            } 
+    
+            if ($('#origen option:selected').val() == 'aep' && $('#destino option:selected').val() == 'eze' && $('#pasajeros option:selected').val() == '610') {
+                $('span#valor').append('15 por persona')
+            } 
+    
+            if ($('#origen option:selected').val() == 'htl' && $('#destino option:selected').val() == 'aep' && $('#pasajeros option:selected').val() == '12') {
+                $('span#valor').append('15 por persona')
+            } 
+    
+            if ($('#origen option:selected').val() == 'htl' && $('#destino option:selected').val() == 'aep' && $('#pasajeros option:selected').val() == '35') {
+                $('span#valor').append('15 por persona')
+            } 
+    
+            if ($('#origen option:selected').val() == 'htl' && $('#destino option:selected').val() == 'aep' && $('#pasajeros option:selected').val() == '610') {
+                $('span#valor').append('15 por persona')
+            } 
+    
+            if ($('#origen option:selected').val() == 'aep' && $('#destino option:selected').val() == 'htl' && $('#pasajeros option:selected').val() == '12') {
+                $('span#valor').append('15 por persona')
+            } 
+    
+            if ($('#origen option:selected').val() == 'aep' && $('#destino option:selected').val() == 'htl' && $('#pasajeros option:selected').val() == '35') {
+                $('span#valor').append('15 por persona')
+            } 
+    
+            if ($('#origen option:selected').val() == 'aep' && $('#destino option:selected').val() == 'htl' && $('#pasajeros option:selected').val() == '610') {
+                $('span#valor').append('15 por persona')
+            } 
+    
+        }
 
+    }
 
-//var serviciosTraslados = [ezehtl1, ezehtl2, ezehtl3, ezehtl4, ezehtl5, ezehtl6, ezehtlreg, htlezereg, aephtl1, aephtl2, aephtl3, aephtl4, aephtl5, aephtl6, aephtlreg, htlaepreg, ezeaep1, ezeaep2, ezeaep3, ezeaep4, ezeaep5, ezeaep6];
-
-
-//var cantidadServicios = serviciosTraslados.length; 
-
-var tiposDeAutos = ['Corolla 5 puertas', 'H1', 'Van de hasta 10 pax con valijas'];
 
 
 
@@ -112,7 +265,7 @@ function guardarEnLocal() {
     var cantPax = $('#pasajeros').val();
     var datos = new Datos (desde, hasta, cantPax)
     var privado = $('#gridRadios1');
-    //console.log(privado)
+    
      if (privado.checked == true) {
        datos.seleccion = 'Privado'
       

@@ -35,37 +35,38 @@
     
     
 
-    <form>
+    <form id="formulario">
         <div class="row">
             <div class="form-group col-12 col-md-6">
                 <label for="origen">Desde</label>
                 <select class="form-control desdehasta" id="origen" >
-                    <option class="indexVacio" id="desdeVacio" >  </option>
-                    <option class="eze"  id="desdeEze" >Aeropuerto Internacional de Ezeiza</option>
-                    <option class="aep" id="desdeAep" >Aeropuerto Jorge Newbery (vuelos domesticos e internacionales)</option>
-                    <option class="htl" id="desdeHtl" >Su hotel</option>
+                    <option class="indexVacio" id="desdeVacio" value="" >  </option>
+                    <option class="eze"  id="desdeEze" value="eze">Aeropuerto Internacional de Ezeiza</option>
+                    <option class="aep" id="desdeAep" value="aep">Aeropuerto Jorge Newbery (vuelos domesticos e internacionales)</option>
+                    <option class="htl" id="desdeHtl" value="htl" >Su hotel</option>
                 </select>
             </div>
     
             <div class="form-group col-12 col-md-6">
                 <label for="destino">Hasta</label>
                 <select class="form-control desdehasta" id="destino" value='Elige el destino' >
-                    <option class="indexVacio" id="hastaVacio">  </option>
-                    <option class="eze" id="hastaEze">Aeropuerto Internacional de Ezeiza</option>
-                    <option class="aep"  id="hastaAep" >Aeropuerto Jorge Newbery (vuelos domesticos e internacionales)</option>
-                    <option class="htl" id="hastaHtl">Su hotel</option>
+                    <option class="indexVacio" id="hastaVacio" value="">  </option>
+                    <option class="eze" id="hastaEze" value="eze">Aeropuerto Internacional de Ezeiza</option>
+                    <option class="aep"  id="hastaAep" value="aep">Aeropuerto Jorge Newbery (vuelos domesticos e internacionales)</option>
+                    <option class="htl" id="hastaHtl" value="htl">Su hotel</option>
                 </select>
+                <p id="errorDestino">  <i class="fas fa-times-circle"></i> El origen y el destino deben ser diferentes</p>
             </div>
         </div>
 
         <div class="row">
             <div class="form-group col-12 col-md-6">
                 <label for="pasajeros">Cantidad de pasajeros</label>
-                <select class="form-control" id="pasajeros">
-                    <option class="indexVacio" id="paxVacio">  </option>
-                    <option id="pax1a2">1-2</option>
-                    <option id="pax3a5">3-5</option>
-                    <option id="pax6a10">6-10</option>
+                <select class="form-control" id="pasajeros" >
+                    <option class="indexVacio" id="paxVacio" value="">  </option>
+                    <option id="pax1a2" value="12">1-2</option>
+                    <option id="pax3a5" value="35">3-5</option>
+                    <option id="pax6a10" value="610">6-10</option>
                 </select>
             </div>
     
@@ -73,13 +74,13 @@
                 <label for="pasajeros">Servicio privado o regular</label>
                 <div id="privadoRegular" class="col-sm-10">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"      value="option1" checked>
+                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"      value="privado" checked>
                       <label class="form-check-label" for="gridRadios1">
                         Privado
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="regular">
                       <label class="form-check-label" for="gridRadios2">
                         Regular
                       </label>
@@ -89,11 +90,15 @@
             </div>
         </div>
 
+        <p id="errorIndex"> <i class="fas fa-exclamation-circle"></i> Todos los campos deben estar completos!</p>
+
         <div class="form-group row">
             <div class="col-12">
-              <button id="enviar" type="button" class="btn btn-primary">Cotizar</button>
+              <button id="enviar" type="button" class="btn btn-primary" >Cotizar</button>
             </div>
           </div>
+
+        
        
           
     </form>   
@@ -103,8 +108,8 @@
             <div class="popup-close">x</div>
             <div class="popup-content">
                 <h3>Gracias por cotizar con nosotros!</h3>
-                <p id="valor" >El valor de su servicio es U$D...</p>
-                <p>Para contratar nuestros servicios dirigase a la seccion <a href="contacto.html">CONTACTO</a></p>
+                <p id="textovalor" >El valor de su servicio es U$D <span id="valor"></span></p>
+                <p>Para contratar nuestros servicios dirigase a la seccion <a id="dirigirContacto" href="">CONTACTO</a></p>
             </div>
         </div>
     </div>
@@ -133,18 +138,21 @@
         <form id="contact">
           <h3>ESCRIBINOS</h3>
           <h4>Contestamos por whatsapp o por email! </h4>
-          <fieldset>
-            <input class="contacto-clase" id="contactoNombre" placeholder="Tu nombre" type="text" tabindex="1" required autofocus>
+          <fieldset id="grupoNombre">
+            <input class="contacto-clase" id="contactoNombre" placeholder="Tu nombre" type="text" tabindex="1" required name="nombre" autofocus>
+            <p class="error" id="error-nombre"><i class="fas fa-times-circle"></i>Tu nombre sólo puede contener letras y/o espacios.</p>
           </fieldset>
-          <fieldset>
-            <input class="contacto-clase" id="contactoEmail" placeholder="Tu correo electronico" type="email" tabindex="2" required autofocus>
+          <fieldset id="grupoEmail">
+            <input class="contacto-clase" id="contactoEmail" placeholder="Tu correo electronico" type="email" tabindex="2" required name="correo" autofocus>
+            <p class="error" id="error-email"><i class="fas fa-times-circle"></i>Tu email sólo puede contener letras, números, puntos, guiones y guiones bajos.</p>
           </fieldset>
-          <fieldset>
-            <input class="contacto-clase" id="contactoTelefono" id="contactoNumero" placeholder="Tu numero de telefono ej: +54 9 11 4567 8912" type="tel" tabindex="3" required autofocus>
+          <fieldset id="grupoTelefono">
+            <input class="contacto-clase" id="contactoTelefono" id="contactoNumero" placeholder="Tu numero de telefono ej: 5491145678912" type="tel" tabindex="3" required name="telefono" autofocus>
+            <p class="error" id="error-telefono"><i class="fas fa-times-circle"></i>Tu teléfono sólo puede contener números.</p>
           </fieldset>
-          <fieldset>
+          <fieldset id="grupoTipoServicio">
             <div class="form-check">
-                <p>Prefiero que me contacten por...</p>
+                <p><strong> Prefiero que me contacten por... </strong></p>
                 <input class="form-check-input" type="radio" name="exampleRadios" id="whatsapp" value="option1" checked>
                 <label class="form-check-label" for="exampleRadios1">
                   Whatsapp
@@ -156,11 +164,16 @@
                   Correo electronico
                 </label>
               </div>
-          <fieldset>
-            <textarea class="contacto-clase" id="contactoMensaje" placeholder="Escribinos tu mensaje aca..." tabindex="5" required></textarea>
+          <fieldset id="grupoMensaje">
+            <textarea class="contacto-clase" id="contactoMensaje" placeholder="Escribinos tu mensaje aca..." tabindex="5" name="mensaje" required></textarea>
+            <p class="error" id="error-mensaje"><i class="fas fa-times-circle"></i>Tu mensaje debe tener al menos 8 palabras.</p>
           </fieldset>
+          <div id="errorContacto">
+            <p><i class="fas fa-exclamation-circle"></i> <strong>Error:</strong> Por favor, debes completar correctamente el formulario. </p>
+          </div>
           <fieldset>
             <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Enviar</button>
+            <p id="mensajeOK">Gracias por enviar tu consulta, responderemos a la brevedad!</p>
           </fieldset>
         </form>
        
@@ -194,7 +207,7 @@
     <script src="jscontacto.js"></script>
     
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     </body>

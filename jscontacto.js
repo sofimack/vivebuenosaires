@@ -10,6 +10,44 @@ function cambiarVerde(){
 }
 
 
+// constantes
+
+  
+const formulario = $('#contact');
+const inputs = document.querySelectorAll('#contact input');
+
+const expresiones = {
+    nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 
+    mensaje: /^[a-zA-ZÀ-ÿ\s]{8,500}$/, 
+	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+	telefono: /^\d{7,15}$/ 
+}
+
+const campos = {
+	usuario: false,
+	nombre: false,
+	password: false,
+	correo: false,
+	telefono: false
+}
+
+const validarFormulario = (e) => {
+	switch (e.target.name) {
+		case "nombre":
+			validarCampo(expresiones.nombre, e.target, 'nombre');
+		break;
+		case "correo":
+			validarCampo(expresiones.correo, e.target, 'correo');
+		break;
+		case "telefono":
+			validarCampo(expresiones.telefono, e.target, 'telefono');
+        break;
+        case "mensaje":
+			validarCampo(expresiones.mensaje, e.target, 'mensaje');
+		break;
+	}
+}
+
 
 //capturar Enter
 
@@ -43,8 +81,8 @@ function eliminarNodo() {
 
 
 //SCROLL A CONTACTO
-var contacto = $('#contacto');
-contacto.click (irAContacto);
+$('#dirigirContacto').click (irAContacto);
+$('#contacto').click (irAContacto);
 
 
 function irAContacto () {

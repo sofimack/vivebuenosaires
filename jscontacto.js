@@ -10,9 +10,12 @@ function cambiarVerde(){
 }
 
 
+//VALIDAR FORM CONTACTO
+
+
 // constantes
 
-  
+ /* 
 const formulario = $('#contact');
 const inputs = document.querySelectorAll('#contact input');
 
@@ -48,7 +51,7 @@ const validarFormulario = (e) => {
 	}
 }
 
-
+*/
 //capturar Enter
 
 $('#contactoMensaje').keypress(teclas);

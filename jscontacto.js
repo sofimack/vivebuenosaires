@@ -68,7 +68,7 @@ function enter() {
     if ( $("#yaEsta").length == 0 ) {
         var otroItem = document.createElement("h3");
         otroItem.id = "yaEsta"
-        var nuevoItem = document.createTextNode("Gracias por contactarse con nosotros");
+        var nuevoItem = document.createTextNode("No se olvide de enviar el formulario");
         otroItem.appendChild(nuevoItem);
         $("#resultado").append(otroItem);
 

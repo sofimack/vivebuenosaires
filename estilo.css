@@ -141,6 +141,7 @@ h1 {
   background-color: darksalmon;
   width: fit-content;
   font-size: 12px;
+  margin-bottom: 0px;
 }
 
 #errorIndex {
@@ -148,6 +149,7 @@ h1 {
   color: red;
   font-weight: bold;
   display: none;
+  margin-bottom: 0px;
 }
 
 
@@ -244,6 +246,11 @@ fieldset {
 	margin:0 0 5px;
 	padding:10px;
 	font-size:15px;
+}
+
+#yaEsta {
+  font-size: 14px;
+  text-align: center;
 }
 
 #contact button[type="submit"]:hover {
@@ -507,3 +514,5 @@ a.button:hover{
   #columns { column-gap: 0px; }
   #columns figure { width: 100%; }
 }
+
+

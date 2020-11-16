@@ -1,13 +1,3 @@
-//SHOW
-
-$(document).ready(cargarTituloPag);
-
-function cargarTituloPag() {
-    $("#tituloPag").fadeIn(3000);
-
-}
-
-
 //ANIMACION de imagenes
 
 var imagenes = $('.fotoBA');
@@ -82,13 +72,13 @@ const htl = ('Hotel');
 
 
 
-// COTIZACION CON AJAX Y JSON
+// COTIZACION 
  
 
 $('#enviar').click (cotizar);
-
+$('span#valor').text() == '.'
 function cotizar () {
-
+     if ($('span#valor').text() == '') {
         if ($('input:radio[name=gridRadios]:checked').val() == 'privado') {
 
             if ($('#origen option:selected').val() == 'eze' && $('#destino option:selected').val() == 'aep' && $('#pasajeros option:selected').val() == '12' ) {
@@ -242,6 +232,9 @@ function cotizar () {
         }
 
     }
+}
+
+
 
 
 

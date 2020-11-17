@@ -42,6 +42,7 @@ function chequeo () {
 
         $('#formulario').submit();
 
+
         };
 
     }
@@ -52,6 +53,9 @@ function chequeo () {
     }
 
 } ; 
+
+
+
 
 // COLOR VERDE CUANDO SELECCIONA
 
